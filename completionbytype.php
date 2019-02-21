@@ -73,7 +73,7 @@ if ($data = $mform->get_data()) {
             ";
     if (!empty($data->coursecategory)) {
         $sql .= " AND c.category = :categoryid ";
-        $params['category'] = $data->coursecategory;
+        $params['categoryid'] = $data->coursecategory;
     } else if (!empty($data->courselist)) {
         $sql .= " AND c.id = :courseid ";
         $params['courseid'] = $data->courselist;
