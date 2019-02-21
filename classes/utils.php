@@ -111,8 +111,8 @@ class utils{
         @header('Content-Type: text/csv');
         $sapfieldid = $DB->get_field('user_info_field', 'id', array('shortname' => 'sapid'));      
         $sql = "SELECT CONCAT(cc.id, c.id) as id , c.id as courseid, 
-                FROM_UNIXTIME(cc.timestarted, '%d%M%Y') as startdate,
-                FROM_UNIXTIME(cc.timecompleted, '%d%M%Y') as enddate,
+                FROM_UNIXTIME(cc.timestarted, '%d%m%Y') as startdate,
+                FROM_UNIXTIME(cc.timecompleted, '%d%m%Y') as enddate,
                 uid.data as sapid
                 FROM {course} c
                 JOIN {course_completions} cc
